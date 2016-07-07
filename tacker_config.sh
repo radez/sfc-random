@@ -112,6 +112,8 @@ EOC
 chmod 644 /usr/lib/systemd/system/openstack-tacker.service
 systemctl daemon-reload
 
+curl https://raw.githubusercontent.com/openstack/tacker/master/etc/tacker/api-paste.ini > /etc/tacker/api-paste.ini
+
 puppet apply configure_tacker.pp
 EOF
 
